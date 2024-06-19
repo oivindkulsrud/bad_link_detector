@@ -1,5 +1,10 @@
 import os
 import re
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+
 
 def get_text_files(directory, extensions=['.kt', '.tsx', '.ts']):
     text_files = []
@@ -59,14 +64,41 @@ def check_all_source_code_files(path):
 
     return link_to_file_dict
 
+def open_link_in_selenium(link):
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+
+    driver.get(link)
+    current_url = driver.current_url
+
+
+    current_url_str = str(current_url).replace('https://www.', '').replace('https://', '')
+    link_str = link.replace('https://www.', '').replace('https://', '')
+
+    if current_url_str != link_str:
+        print(f'Redirected from {link} to {current_url}')
+    else:
+        pass
+
+    driver.quit()
+
 if __name__ == '__main__':
 
-    directory = '../sykepengesoknad-frontend'
+    # directory = '../sykepengesoknad-frontend'
+    # directory = '../spinnsyn-frontend'
+    directory = '../ditt-sykefravaer'
 
     link_to_file_dict = check_all_source_code_files(directory)
     print(link_to_file_dict)
-    # for i in data:
-    #     print(i)
+    for link in link_to_file_dict:
+        if 'cypress' in link or 'localhost' in link or 'uxsignals' in link or 'nextjs' in link or "${" in link or 'nais.io' in link:
+            continue
+        # print(link)
+        open_link_in_selenium(link)
+
 
 
 

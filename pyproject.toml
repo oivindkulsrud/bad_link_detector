@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bad-link-detector"
+version = "0.1.0"
+description = ""
+authors = ["Oivind Thorsen Kulsrud <oivind.thorsen.kulsrud@nav.no>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+selenium = "^4.21.0"
+webdriver-manager = "^4.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
