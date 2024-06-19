@@ -79,7 +79,7 @@ def open_link_in_selenium(link):
     link_str = link.replace('https://www.', '').replace('https://', '')
 
     if current_url_str != link_str:
-        print(f'Redirected from {link} to {current_url}')
+        print(f'- [ ] Redirected from {link} to {current_url}')
     else:
         pass
 
@@ -88,11 +88,12 @@ def open_link_in_selenium(link):
 if __name__ == '__main__':
 
     # directory = '../sykepengesoknad-frontend'
-    # directory = '../spinnsyn-frontend'
-    directory = '../ditt-sykefravaer'
+    directory = '../spinnsyn-frontend'
+    # directory = '../ditt-sykefravaer'
 
     link_to_file_dict = check_all_source_code_files(directory)
     print(link_to_file_dict)
+    print("checking directory: ", directory)
     for link in link_to_file_dict:
         if 'cypress' in link or 'localhost' in link or 'uxsignals' in link or 'nextjs' in link or "${" in link or 'nais.io' in link:
             continue
