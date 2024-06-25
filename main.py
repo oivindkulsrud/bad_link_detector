@@ -73,25 +73,42 @@ def open_link_in_selenium(link):
 
     driver.get(link)
     current_url = driver.current_url
+    scroll_position = driver.execute_script("return window.scrollY")
 
 
     current_url_str = str(current_url).replace('https://www.', '').replace('https://', '')
     link_str = link.replace('https://www.', '').replace('https://', '')
 
-    if current_url_str != link_str:
-        print(f'- [ ] Redirected from {link} to {current_url}')
+    was_redirected = current_url_str != link_str
+
+
+    if ("#" in link):
+        print("anchor found in link")
+        link_without_anchor = link.split("#")[0]
+        driver.get(link_without_anchor)
+        scroll_position_without_anchor = driver.execute_script("return window.scrollY")
+        if scroll_position_without_anchor == scroll_position:
+            print(f'------ anchor does not matter to scroll position, broken? {link}')
+        else:
+            print(f'anchor works! {link}')
+
+
+
+
+
+    if was_redirected:
+        print(f'!!!!!! Redirected from {link} to {current_url} scroll position: {scroll_position}')
     else:
-        pass
+        print(f'not redirected: went from {link} to {current_url} scroll position: {scroll_position}')
 
     driver.quit()
 
+
+
 if __name__ == '__main__':
 
-    # directory = '../sykepengesoknad-frontend'
-    directory = '../spinnsyn-frontend'
-    # directory = '../ditt-sykefravaer'
-    directory = '../'
-
+    directory = '../sykepengesoknad-frontend'
+  
     link_to_file_dict = check_all_source_code_files(directory)
     print(link_to_file_dict)
     print("checking directory: ", directory)
