@@ -90,12 +90,16 @@ if __name__ == '__main__':
     # directory = '../sykepengesoknad-frontend'
     directory = '../spinnsyn-frontend'
     # directory = '../ditt-sykefravaer'
+    directory = '../'
 
     link_to_file_dict = check_all_source_code_files(directory)
     print(link_to_file_dict)
     print("checking directory: ", directory)
+    print ("Links found in the source code: ", len(link_to_file_dict))
     for link in link_to_file_dict:
-        if 'cypress' in link or 'localhost' in link or 'uxsignals' in link or 'nextjs' in link or "${" in link or 'nais.io' in link:
+        if 'cypress' in link or 'localhost' in link or 'uxsignals' in link or 'nextjs' in link \
+                or "${" in link or 'nais.io' in link or 'dev.nav.no' in link or 'github' in link \
+                or 'navno.sharepoint' in link or "tjenester-q1" in link or "logs.adeo.no" in link:
             continue
         # print(link)
         open_link_in_selenium(link)
