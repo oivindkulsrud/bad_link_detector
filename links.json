@@ -1,0 +1,198 @@
+{
+    "https://nextjs.org/docs/basic-features/typescript": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/next-env.d.ts"
+        ]
+    },
+    "https://on.cypress.io/custom-commands": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/cypress/support/commands.ts"
+        ]
+    },
+    "https://on.cypress.io/configuration": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/cypress/support/e2e.ts"
+        ]
+    },
+    "https://www.nav.no/reisetilskudd": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/cypress/e2e/run-3/reisetilskudd.cy.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-gradert-reisetilskudd-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-reisetilskudd-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/saksbehandlingstider#sykepenger": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/cypress/e2e/run-2/kvittering.cy.ts",
+            "../sykepengesoknad-frontend/cypress/e2e/run-2/kvittering.cy.ts",
+            "../sykepengesoknad-frontend/cypress/e2e/run-2/kvittering.cy.ts",
+            "../sykepengesoknad-frontend/src/components/kvittering/kvittering-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/skriv-til-oss": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/cypress/e2e/run-0/arbeidstaker_100.cy.ts",
+            "../sykepengesoknad-frontend/cypress/e2e/run-0/arbeidstaker_100.cy.ts",
+            "../sykepengesoknad-frontend/cypress/e2e/run-0/arbeidsledig_100.cy.ts",
+            "../sykepengesoknad-frontend/cypress/e2e/run-0/arbeidsledig_100.cy.ts",
+            "../sykepengesoknad-frontend/src/components/endreknapp/endreknapp.tsx",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-arbeidsledig-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-arbeidsledig-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-gradert-reisetilskudd-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-gradert-reisetilskudd-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-arbeidstakere-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-arbeidstakere-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-selvstendig-naeringsdrivende-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-selvstendig-naeringsdrivende-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-annet-arbeidsforhold-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-annet-arbeidsforhold-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/sykepenger": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/cypress/e2e/run-0/arbeidstaker_100.cy.ts",
+            "../sykepengesoknad-frontend/cypress/e2e/run-0/arbeidsledig_100.cy.ts",
+            "../sykepengesoknad-frontend/cypress/e2e/run-0/behandlingsdager.cy.ts",
+            "../sykepengesoknad-frontend/src/components/om-sykepenger/om-sykepenger-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-arbeidsledig-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-gradert-reisetilskudd-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-arbeidstakere-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-selvstendig-naeringsdrivende-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-behandlingsdager-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/sporsmal/bekreftelsespunkter/bekreftelsespunkter-annet-arbeidsforhold-tekster.ts"
+        ]
+    },
+    "https://github.com/navikt/syfosoknad/commit/1983d32f3a7fb28bbf17126ea227d91589ad5f35": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/types/mapping.ts"
+        ]
+    },
+    "https://joshwcomeau.com/react/the-perils-of-rehydration/": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/utils/useWindowSize.ts"
+        ]
+    },
+    "https://www.nav.no/yrkesskade": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/hjelpetekster/ekspanderbar-hjelp/yrkesskade-hjelp-body.tsx",
+            "../sykepengesoknad-frontend/src/components/hjelpetekster/ekspanderbar-hjelp/yrkesskade-hjelp-body.tsx"
+        ]
+    },
+    "https://www.nav.no/sykepenger#ferie": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/hjelpetekster/ekspanderbar-hjelp/ferie-hjelp-body.tsx"
+        ]
+    },
+    "https://www.nav.no/kombinasjoner": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/hjelpetekster/ekspanderbar-hjelp/ekspanderbar-hjelp-tekst.ts",
+            "../sykepengesoknad-frontend/src/components/hjelpetekster/ekspanderbar-hjelp/ekspanderbar-hjelp-tekst.ts"
+        ]
+    },
+    "https://www.nav.no/sykepenger#situasjoner": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/hjelpetekster/ekspanderbar-hjelp/ekspanderbar-hjelp-tekst.ts"
+        ]
+    },
+    "https://www.nav.no/sykepenger-og-personopplysninger": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/soknad/soknaden.tsx"
+        ]
+    },
+    "https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Utbetalinger/Utbetalingsdatoer%2C+feriepenger+og+skattetrekk?kap=499628": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/soknad/soknaden-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/soknad/soknaden-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/soknad/soknaden-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/no/person/arbeid/sykmeldt-arbeidsavklaringspenger-og-yrkesskade/sykepenger": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/kvittering/kvittering-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/no/bedrift/tjenester-og-skjemaer/nav-og-altinn-tjenester/inntektsmelding": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/kvittering/kvittering-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/no/person/arbeid/sykmeldt-arbeidsavklaringspenger-og-yrkesskade/sykepenger/sykepenger-ved-utenlandsopphold": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/kvittering/kvittering-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/utbetalingsdatoer#sykepenger": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/kvittering/kvittering-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/kvittering/kvittering-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/person/personopplysninger/#utbetaling": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/kvittering/kvittering-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/kvittering/kvittering-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/fyllut/nav083501": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/kvittering/innhold/SendInntektsopplysningerForSelvstendigNaringsdrivende.tsx"
+        ]
+    },
+    "https://www.nav.no/sykepenger#utland": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/om-sykepenger/om-sykepenger-tekster.ts",
+            "../sykepengesoknad-frontend/src/components/opprett-utland/opprett-utland.tsx"
+        ]
+    },
+    "https://app.uxsignals.com/docs": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/ux-signals/UxSignalsWidget.tsx"
+        ]
+    },
+    "https://uxsignals-frontend.uxsignals.app.iterate.no/embed.js": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/ux-signals/UxSignalsWidget.tsx"
+        ]
+    },
+    "https://www.nav.no/soknader/nb/person/helse/sykepenger#NAV083501": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/sporsmal/sporsmal-tekster.ts"
+        ]
+    },
+    "https://www.nav.no/soknader/nb/person/til-eller-fra-norge/opphold-eller-arbeid-utenfor-norge/NAV%2008-09.07/brev": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/sporsmal/guidepanel/guidepanel-tekster.ts"
+        ]
+    },
+    "https://nav.no/reisetilskudd": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/om-reisetilskudd/om-reisetilskudd.tsx"
+        ]
+    },
+    "https://www.nav.no/fyllut/nav080907?sub=paper": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/opprett-utland/opprett-utland.tsx"
+        ]
+    },
+    "https://www.nav.no/no/NAV+og+samfunn/Om+NAV/personvern-i-arbeids-og-velferdsetaten": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/components/opprett-utland/opprett-utland.tsx"
+        ]
+    },
+    "https://api.uxsignals.com/v2/study/id/${id}/active`)": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/hooks/useStudyStatus.ts"
+        ]
+    },
+    "https://tjenester.nav.no/sykefravaer/sykepengesoknad-utland": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/data/mock/data/soknad/veldig-land-soknad.ts",
+            "../sykepengesoknad-frontend/src/data/mock/data/soknad/veldig-land-soknad.ts"
+        ]
+    },
+    "https://tkdodo.eu/blog/breaking-react-querys-api-on-purpose": {
+        "found_in_files": [
+            "../sykepengesoknad-frontend/src/pages/_app.page.tsx"
+        ]
+    }
+}
