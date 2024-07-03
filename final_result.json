@@ -30,7 +30,7 @@
             "../sykepengesoknad-frontend/cypress/e2e/run-2/kvittering.cy.ts",
             "../sykepengesoknad-frontend/src/components/kvittering/kvittering-tekster.ts"
         ],
-        "scroll_position": 10092,
+        "scroll_position": 10280,
         "link_without_anchor": "https://www.nav.no/saksbehandlingstider",
         "scroll_position_without_anchor": 0,
         "redirected": false

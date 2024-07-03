@@ -8,6 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 # import logging
 import json
+import pandas as pd
 
 # Configure logger
 # logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -77,7 +78,7 @@ def check_all_source_code_files(path):
 
 def check_link_in_selenium(link, file_list):
     chrome_options = Options()
-    chrome_options.add_argument("--headless")
+    # chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
@@ -102,12 +103,12 @@ def check_link_in_selenium(link, file_list):
 
     if was_redirected:
         LINK_INFO_DICT[link]['redirected_to'] = current_url
+        LINK_INFO_DICT[link]['was_redirected'] = True
+    else:
+        LINK_INFO_DICT[link]['was_redirected'] = False
 
-
-
-
-# todo the sleep has to be WITH THE ANCH
     if ("#" in link):
+        """ The previous test of scroll positionactually checks what the anchor does, which is why you need a delay for it to work."""
 
         print("anchor found in link")
         link_without_anchor = link.split("#")[0]
@@ -122,6 +123,7 @@ def check_link_in_selenium(link, file_list):
             print(f'------ anchor does not matter to scroll position, broken? {link}: used in these files: {file_list}')
             LINK_INFO_DICT[link]['anchor_broken'] = True
         else:
+            LINK_INFO_DICT[link]['anchor_broken'] = False
             print(f'anchor works! {link}')
 
 
@@ -139,9 +141,22 @@ def check_link_in_selenium(link, file_list):
 
 def skip_link(link):
     blacklist = ['cypress', 'localhost', 'uxsignals', 'nextjs', '${', 'nais.io',
-               'dev.nav.no', 'github', 'navno.sharepoint', 'tjenester-q1', 'logs.adeo.no', 'flexjar.intern.nav', 'flex-hotjar-emotions', 'amplitude']
+               'dev.nav.no', 'github', 'navno.sharepoint', 'tjenester-q1', 'logs.adeo.no', 'flexjar.intern.nav', 'flex-hotjar-emotions', 'amplitude', 'joshwcomeau.com']
     return any(item in link for item in blacklist)
 
+
+def data_dict_store_flattened_to_excel():
+    for link in LINK_INFO_DICT.keys():
+        LINK_INFO_DICT[link]['url'] = link
+    link_info_dict_values = LINK_INFO_DICT.values()
+
+    for item in link_info_dict_values:
+        item['ignored'] = skip_link(item['url'])
+
+
+    df = pd.DataFrame(link_info_dict_values)
+    df = df.sort_values(by='ignored', ascending=False)
+    df.to_excel("output.xlsx", index=False)
 
 if __name__ == '__main__':
 
@@ -154,8 +169,8 @@ if __name__ == '__main__':
     print ("Links found in the source code: ", len(LINK_INFO_DICT))
     counter = 0
     for link in LINK_INFO_DICT:
-        if counter > 4:
-            break
+        # if counter > 10:
+        #     break
         if skip_link(link):
             # todo maybe delete here?
             continue
@@ -164,8 +179,10 @@ if __name__ == '__main__':
             print(f"checking: {link}")
             # print(link)
             check_link_in_selenium(link, LINK_INFO_DICT[link])
-    with open('final_result.json', 'w') as json_file:
-        json.dump(LINK_INFO_DICT, json_file, indent=4)
+    data_dict_store_flattened_to_excel()
+
+
+
 
 
 
