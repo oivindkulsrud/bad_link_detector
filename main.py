@@ -112,8 +112,8 @@ def check_link_in_selenium(link, file_list):
 
         print("anchor found in link")
         link_without_anchor = link.split("#")[0]
-        sleep(5)
         driver.get(link_without_anchor)
+        sleep(5) # sleeps, then checks scroll position on the next line, scroll can be delayed due to loading and animations
         scroll_position_without_anchor = driver.execute_script("return window.scrollY")
         LINK_INFO_DICT[link]['link_without_anchor'] = link_without_anchor
         LINK_INFO_DICT[link]['scroll_position_without_anchor'] = scroll_position_without_anchor
@@ -141,7 +141,7 @@ def check_link_in_selenium(link, file_list):
 
 def skip_link(link):
     blacklist = ['cypress', 'localhost', 'uxsignals', 'nextjs', '${', 'nais.io',
-               'dev.nav.no', 'github', 'navno.sharepoint', 'tjenester-q1', 'logs.adeo.no', 'flexjar.intern.nav', 'flex-hotjar-emotions', 'amplitude', 'joshwcomeau.com']
+               'dev.nav.no', 'github', 'navno.sharepoint', 'tjenester-q1', 'logs.adeo.no', 'flexjar.intern.nav', 'flex-hotjar-emotions', 'amplitude', 'joshwcomeau.com', 'kotlinlang.org']
     return any(item in link for item in blacklist)
 
 
@@ -160,8 +160,8 @@ def data_dict_store_flattened_to_excel():
 
 if __name__ == '__main__':
 
-    directory = '../sykepengesoknad-frontend'
-    # directory = '../'
+    # directory = '../sykepengesoknad-frontend'
+    directory = '../'
 
     check_all_source_code_files(directory)
     print(LINK_INFO_DICT)
